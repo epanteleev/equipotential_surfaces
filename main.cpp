@@ -29,7 +29,7 @@ static const char *fragmentShaderSource =
                 vec2 r = gl_FragCoord.xy - charges[i].xy;\
                 ch += charges[i].z * vec3(0, 0, 1.0 / length(r));\
             }\
-            float q = sign(ch.z) * floor(pow(length(ch.z), 0.3) * 25.0) / 25.0;\
+            float q = sign(ch.z) * floor(pow(length(ch.z), 0.3) * 25.0) / 17.0;\
             gl_FragColor = vec4(q, 0, -q, 1) + vec4(1 - abs(q));\
             gl_FragColor.rgb -= (step(min(fract(gl_FragCoord.xy / 20.0).x,fract(gl_FragCoord.xy / 20.0).y), 1.0 / 20.0)\
                      + step(min(fract(gl_FragCoord.xy / 100.0).x,fract(gl_FragCoord.xy / 100.0).y), 1.0 / 100.0)) * 0.2;\

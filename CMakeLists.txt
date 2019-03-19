@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(Potential)
+project(equipotential_surfaces)
 
 option(GLFW_BUILD_DOCS OFF)
 option(GLFW_BUILD_EXAMPLES OFF)
